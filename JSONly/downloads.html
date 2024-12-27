@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSONly Downloads</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    <title>JSONly Downloads</title>
     <style>
+        .downloads-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .download-box {
+            border: 2px solid #646cff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #1e1e2e;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        ..download-box img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
         .download-link {
             display: block;
             margin: 10px 0;
@@ -19,6 +43,14 @@
             text-align: center;
             transition: background-color 0.3s ease;
         }
+        .download-link:hover {
+            background-color: #535bf2;
+        }
+        .alt-downloads {
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -26,21 +58,51 @@
         <h1>JSONly Downloads</h1>
     </header>
     <main class="downloads-section">
-        <h2>Download the Latest Version</h2>
-        <p>You can download JSONly for your platform using the links below. Ensure you select the version that matches your operating system:</p>
-
-        <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/latest" target="_blank">GitHub Latest Release</a>
-        <a class="download-link" href="https://sourceforge.net/projects/JSONly/files/latest/download" target="_blank">SourceForge Mirror</a>
-
-        <h2>Older Versions</h2>
-        <p>Need an older version? Visit our GitHub or SourceForge pages to browse past releases:</p>
-        <ul>
-            <li><a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases" target="_blank">GitHub Archive</a></li>
-            <li><a class="download-link" href="https://sourceforge.net/projects/JSONly/files/" target="_blank">SourceForge Archive</a></li>
-        </ul>
+        <div class="download-box">
+            <img src="../icons/linux.png" alt="Linux" />
+            <p>Linux</p>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/download/v0.2.0-beta/jsonly_1.2.0-beta_x86_64-linux.AppImage">
+                AppImage
+            </a>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/download/v0.2.0-beta/jsonly_1.2.0-beta_amd64.deb">
+                .deb installation file
+            </a>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/download/v0.2.0-beta/jsonly_1.2.0-beta_x86_64-linux-binary.bin">
+                Linux binary
+            </a>
+        </div>
+        <div class="download-box">
+            <img src="../icons/windows.png" alt="Windows" height="315" width="315" />
+            <p>Windows</p>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/download/v0.2.0-beta/jsonly_1.2.0-beta_x86_64-windows-installer.exe">
+                Installer
+            </a>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/download/v0.2.0-beta/jsonly_1.2.0-beta_x86_64-windows-standalone.exe">
+                Standalone executable
+            </a>
+        </div>
+        <div class="download-box">
+            <p>Source code</p>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/archive/refs/tags/v0.2.0-beta.zip">
+                Zip archive
+            </a>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/archive/refs/tags/v0.2.0-beta.tar.gz">
+                Tarball
+            </a>
+        </div>
+        <div class="alt-downloads">
+            <h2>Not working? Try these links</h2>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/latest">GitHub Latest Release</a>
+            <a class="download-link" href="https://sourceforge.net/projects/JSONly/files/latest/download">SourceForge Mirror</a>
+        </div>
+        <div class="alt-downloads">
+            <h2>Need a later version? Try these links</h2>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/">GitHub Archive</a>
+            <a class="download-link" href="https://sourceforge.net/projects/JSONly/files/">SourceForge Archive</a>
+        </div>
     </main>
     <footer>
-        © 2024 JSONly. Made with ❤️ by Luke.
+        © 2024 JSONly. Made with ❤️ by Luke Moyer.
     </footer>
 </body>
 </html>
