@@ -1,0 +1,27 @@
+.image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        figure {
+            margin: 0;
+            flex: 0 1 calc(33.333% - 20px);
+            min-width: 200px;
+            max-width: 200px;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        figcaption {
+            text-align: center;
+            font-style: italic;
+            color: gray;
+            margin-top: 8px;
+        }
