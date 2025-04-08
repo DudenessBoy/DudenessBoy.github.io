@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="downloads.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <title>JSONly Downloads</title>
+</head>
+<body>
+    <header>
+        <h1>JSONly Downloads</h1>
+        <p>Current version: v1.0.1 hotfix</p>
+    </header>
+    <p>Looking for beta or release candidate versions? <a href="beta.html">Click here</a> for experimental builds.</p>
+    <main class="downloads-section">
+        <div class="download-box">
+            <img src="/icons/linux.png" alt="Linux" />
+            <p>Linux</p>
+            <a class="download-link" id="linuxLink">
+                AppImage
+            </a>
+            <a class="download-link" id="debLink">
+                .deb installation file
+            </a>
+        </div>
+        <div class="download-box">
+            <img src="/icons/windows.png" alt="Windows" height="315" width="315" />
+            <p>Windows</p>
+            <a class="download-link" id="windowsInstallerLink">
+                Installer
+            </a>
+            <a class="download-link" id="windowsStandaloneLink">
+                Standalone Executable
+            </a>
+        </div>
+        <div class="download-box">
+            <img src="/icons/mac.png" alt="MacOS" height="315" width="275" />
+            <p>MacOS</p>
+            <a class="download-link" id="macInstallerLink">
+                DMG disk image
+            </a>
+            <a class="download-link" id="macStandaloneLink">
+                Standalone .app bundle (ZIP archive)
+            </a>
+        </div>
+        <div class="download-box">
+            <img src="/icons/python.png" alt="source" height="315" width="275" />
+            <p>Source code</p>
+            <a class="download-link" id="sourceZipLink">
+                ZIP archive
+            </a>
+            <a class="download-link" id="sourceTarGzLink">
+                Tarball
+            </a>
+        </div>
+        <div class="alt-downloads">
+            <h2>Not working? Try these links</h2>
+            <a class="download-link" id="githubRelease" target="_blank">GitHub Release</a>
+            <a class="download-link" id="sourceforgeRelease" target="_blank">SourceForge Mirror</a>
+        </div>
+        <div class="alt-downloads">
+            <h2>Need an earlier version? Try these links</h2>
+            <a class="download-link" href="https://github.com/DudenessBoy/JSONly/releases/" target="_blank">GitHub Archive</a>
+            <a class="download-link" href="https://sourceforge.net/projects/JSONly/files/" target="_blank">SourceForge Archive</a>
+        </div>
+    </main>
+    <script>
+        const version = "1.0.1";
+    </script>
+    <script src="get_links.js"></script>
+    <footer>
+        © 2024 JSONly. Made with ❤️ by <a href="/">Luke Moyer</a>.
+    </footer>
+</body>
+</html>
