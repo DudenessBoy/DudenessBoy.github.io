@@ -68,6 +68,7 @@ footer {
 }
 
 .info-section {
+    max-width: 900px;
     margin-top: 20px;
     text-align: left;
     font-size: 1em;
@@ -78,4 +79,11 @@ footer {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #ffffff;
+}
+
+.info-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
