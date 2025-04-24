@@ -1,6 +1,4 @@
-// Assumes 'version' is defined before this script is loaded
-
-const defaultBaseUrl = `https://github.com/DudenessBoy/JSONly/releases/download/v${version}/`;
+const defaultBaseUrlRoot = "https://github.com/DudenessBoy/JSONly/releases/download/";
 const sourceUrl = "https://github.com/DudenessBoy/JSONly/archive/refs/tags/";
 
 // Define file links and optionally override the base URL
@@ -31,17 +29,30 @@ const fileMap = {
   }
 };
 
-function getFileName(template) {
+function getFileName(template, version) {
   return template.replace("VERSION", version);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  for (const [id, data] of Object.entries(fileMap)) {
-    const el = document.getElementById(id);
-    if (!el) continue;
+  fetch(versionFile)  // Assuming versionFile was defined in the HTML
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to fetch " + versionFile);
+      return response.text();
+    })
+    .then(text => {
+      const version = text.trim();
+      const defaultBaseUrl = `${defaultBaseUrlRoot}v${version}/`;
 
-    const base = data.base || defaultBaseUrl;
-    const fileName = getFileName(data.file);
-    el.href = `${base}${fileName}`;
-  }
+      for (const [id, data] of Object.entries(fileMap)) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+
+        const base = data.base || defaultBaseUrl;
+        const fileName = getFileName(data.file, version);
+        el.href = `${base}${fileName}`;
+      }
+    })
+    .catch(err => {
+      console.error("Could not load version.txt:", err);
+    });
 });
